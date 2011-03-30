@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
-using System.IO;
 
 namespace SpellWork
 {
@@ -24,7 +21,7 @@ namespace SpellWork
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "SpellWork Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "SpellWork Eroor!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
