@@ -608,6 +608,10 @@ namespace SpellWork
         {
             get
             {
+                if (SpellClassOptionsId == 0 || !DBC.SpellClassOptions.ContainsKey(SpellClassOptionsId))
+                {
+                    return default(SpellClassOptionsEntry);
+                }
                 try
                 {
                     return DBC.SpellClassOptions[SpellClassOptionsId];

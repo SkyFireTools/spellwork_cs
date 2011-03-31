@@ -81,7 +81,8 @@ namespace SpellWork
                     else
                         mask[2] = 1U << (node.Index - 64);
 
-                    if ((spell.SpellClassOptions.SpellFamilyFlags.ContainsElement(mask)))
+                    if (spell.SpellClassOptions.SpellFamilyFlags == null || 
+                        spell.SpellClassOptions.SpellFamilyFlags.ContainsElement(mask))
                     {
                         TreeNode child  = new TreeNode();
                         child           = node.Nodes.Add(name.ToString());
