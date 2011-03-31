@@ -14,8 +14,8 @@ namespace SpellWork
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-                new Loader();
-                Application.Run(new FormMain());
+            new Loader();
+            Application.Run(new FormMain());
         }
     }
 }

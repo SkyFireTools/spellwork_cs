@@ -145,11 +145,11 @@ namespace SpellWork
                             LocalesDescription  = reader[4].ToString(),
                             SpellID             = new uint[] 
                             { 
-                                (uint)reader[5], 
-                                (uint)reader[6], 
-                                (uint)reader[7], 
-                                (uint)reader[8], 
-                                (uint)reader[9] 
+                                (uint)(int)reader[5], 
+                                (uint)(int)reader[6], 
+                                (uint)(int)reader[7], 
+                                (uint)(int)reader[8], 
+                                (uint)(int)reader[9] 
                             }
                         });
                     }
