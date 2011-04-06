@@ -24,6 +24,7 @@ namespace SpellWork
                     DBC.SpellEffects[value.Value.EffectSpellId].Add((int)value.Value.EffectIndex, value.Value);
                 }
             }
+            DBC.SpellDifficulty     = DBCReader.ReadDBC<SpellDifficultyEntry>(null);
 
             DBC.SpellTargetRestrictions     = DBCReader.ReadDBC<SpellTargetRestrictionsEntry>(null);
             DBC.SpellAuraRestrictions       = DBCReader.ReadDBC<SpellAuraRestrictionsEntry>(null);
