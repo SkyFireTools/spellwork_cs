@@ -764,6 +764,18 @@ namespace SpellWork
         PROC_EX_EX_ONE_TIME_TRIGGER     = 0x0020000                  // If set trigger always but only one time (not used)
     };
 
+    public enum SpellSchoolsForProcs
+    {
+        NONE = 0,
+        PHYSICAL = 1,
+        HOLY = 2,
+        FIRE = 3,
+        NATURE = 4,
+        FROST = 5,
+        SHADOW = 6,
+        ARCANE = 7
+    };
+
     public enum SpellSchools
     {
         PHYSICAL   = 0,

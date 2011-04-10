@@ -158,6 +158,8 @@ namespace SpellWork
             uint val = 0;
             for (int i = 0; i < _name.CheckedIndices.Count; i++)
             {
+                if (_name.CheckedIndices[i] == 0)
+                    continue;   // first flag is NONE so should = 0, not -1
                 val += 1U << (_name.CheckedIndices[i] - 1);
             }
 

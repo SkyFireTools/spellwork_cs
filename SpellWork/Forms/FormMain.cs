@@ -15,7 +15,7 @@ namespace SpellWork
         public FormMain()
         {
             InitializeComponent();
-            splitContainer3.SplitterDistance = 128;
+            //splitContainer3.SplitterDistance = 128;
             
             Text = DBC.VERSION;
 
@@ -34,7 +34,7 @@ namespace SpellWork
             _cbProcSpellFamilyTree.SetEnumValues<SpellFamilyNames>("SpellFamilyTree");
             _cbProcFitstSpellFamily.SetEnumValues<SpellFamilyNames>("SpellFamilyName");
 
-            _clbSchools.SetFlags<SpellSchools>();
+            _clbSchools.SetFlags<SpellSchoolsForProcs>();
             _clbProcFlags.SetFlags<ProcFlags>("PROC_FLAG_");
             _clbProcFlagEx.SetFlags<ProcFlagsEx>("PROC_EX_");
 
@@ -338,7 +338,7 @@ namespace SpellWork
                 spell.ID,
                 spell.SpellNameRank,
                 _clbSchools.GetFlagsValue(),
-                _cbProcFitstSpellFamily.ValueMember,
+                _cbProcFitstSpellFamily.SelectedValue,
                 SpellFamilyFlags[0],
                 SpellFamilyFlags[1],
                 SpellFamilyFlags[2],
@@ -502,7 +502,7 @@ namespace SpellWork
                 case "_bSqlSchool":
                     {
                         uint val = _tbSqlSchool.Text.ToUInt32();
-                        FormCalculateFlags form = new FormCalculateFlags(typeof(SpellSchools), val, "");
+                        FormCalculateFlags form = new FormCalculateFlags(typeof(SpellSchoolsForProcs), val, "");
                         form.ShowDialog(this);
                         if (form.DialogResult == DialogResult.OK)
                             _tbSqlSchool.Text = form.Flags.ToString();
@@ -611,6 +611,9 @@ namespace SpellWork
             _tbCooldown.Text = proc.Cooldown.ToString();
 
             _tvFamilyTree.SetMask(proc.SpellFamilyMask);
+
+            _bWrite.Enabled = true;
+            GetProcAttribute(ProcInfo.SpellProc);
             
             tabControl1.SelectedIndex = 1;
         }
