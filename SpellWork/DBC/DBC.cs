@@ -4,7 +4,7 @@ namespace SpellWork
 {
     public static class DBC
     {
-        public const string VERSION  = "SpellWork 4.0.3 (13117)";
+        public const string VERSION  = "SpellWork 4.0.6 (13623)";
         public const string DBC_PATH = "dbc";
 
         public const int MAX_DBC_LOCALE                 = 16;
