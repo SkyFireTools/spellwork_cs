@@ -61,9 +61,9 @@ namespace SpellWork
                         str.SpellFamilyName     = reader[2].ToUInt32();
                         str.SpellFamilyMask     = new[] 
                         { 
-                            (uint)reader[3], 
-                            (uint)reader[4], 
-                            (uint)reader[5] 
+                            reader[3].ToUInt32(), 
+                            reader[4].ToUInt32(), 
+                            reader[5].ToUInt32() 
                         };
                         str.ProcFlags           = reader[6].ToUInt32();
                         str.ProcEx              = reader[7].ToUInt32();

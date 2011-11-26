@@ -546,6 +546,7 @@ namespace SpellWork
             sb.AppendFormatIfNotNull(" SchoolMask {1} {0} &&", _tbSqlSchool.Text.ToInt32(), compare);
             sb.AppendFormatIfNotNull(" procFlags {1} {0} &&", _tbSqlProc.Text.ToInt32(), compare);
             sb.AppendFormatIfNotNull(" procEx {1} {0} &&", _tbSqlProcEx.Text.ToInt32(), compare);
+            sb.AppendFormatIfNotNull(" entry {1} {0} &&", _tbSqlSpellid.Text.ToInt32(), compare);
 
             String subquery = sb.ToString().Remove(sb.Length - 2, 2);
             subquery = subquery == "WHERE" ? "" : subquery;
