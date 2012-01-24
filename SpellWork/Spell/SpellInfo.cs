@@ -335,6 +335,7 @@ namespace SpellWork
                 }
 
                 rtb.AppendFormatLineIfNotNull("{0}", spell.GetRadius(EFFECT_INDEX));
+                rtb.AppendFormatLineIfNotNull("{0}", spell.GetMaxRadius(EFFECT_INDEX));
 
                 // append trigger spell
                 uint trigger = spell.GetEffect(EFFECT_INDEX).EffectTriggerSpell;
