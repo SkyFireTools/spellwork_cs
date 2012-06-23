@@ -80,7 +80,7 @@ namespace SpellWork
             rtb.AppendFormatLine("PreventionType = {0} ({1})", spellCategories.PreventionType, (SpellPreventionType)spellCategories.PreventionType);
 
             if (spell.Attributes != 0 || spell.AttributesEx != 0 || spell.AttributesEx2 != 0 || spell.AttributesEx3 != 0
-                || spell.AttributesEx4 != 0 || spell.AttributesEx5 != 0 || spell.AttributesEx6 != 0 || spell.AttributesExG != 0)
+                || spell.AttributesEx4 != 0 || spell.AttributesEx5 != 0 || spell.AttributesEx6 != 0 || spell.AttributesEx7 != 0)
                 rtb.AppendLine(_line);
 
             if (spell.Attributes != 0)
@@ -97,8 +97,8 @@ namespace SpellWork
                 rtb.AppendFormatLine("AttributesEx5: 0x{0:X8} ({1})", spell.AttributesEx5, (SpellAtributeEx5)spell.AttributesEx5);
             if (spell.AttributesEx6 != 0)
                 rtb.AppendFormatLine("AttributesEx6: 0x{0:X8} ({1})", spell.AttributesEx6, (SpellAtributeEx6)spell.AttributesEx6);
-            if (spell.AttributesExG != 0)
-                rtb.AppendFormatLine("AttributesExG: 0x{0:X8} ({1})", spell.AttributesExG, (SpellAtributeExG)spell.AttributesExG);
+            if (spell.AttributesEx7 != 0)
+                rtb.AppendFormatLine("AttributesEx7: 0x{0:X8} ({1})", spell.AttributesEx7, (SpellAtributeEx7)spell.AttributesEx7);
 
             rtb.AppendLine(_line);
 
@@ -254,7 +254,7 @@ namespace SpellWork
                 SpellEffectEntry effect = spell.GetEffect(EFFECT_INDEX);
 
                 rtb.SetBold();
-                if ((SpellEffects)effect.Effect == SpellEffects.NO_SPELL_EFFECT)
+                if ((SpellEffects)effect.Effect == SpellEffects.SPELL_EFFECT_NONE)
                 {
                     rtb.AppendFormatLine("Effect {0}:  NO EFFECT", EFFECT_INDEX);
                     rtb.AppendLine();

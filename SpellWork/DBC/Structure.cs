@@ -244,7 +244,7 @@ namespace SpellWork
         public uint    AttributesEx4;                                // 5        m_attributesExD
         public uint    AttributesEx5;                                // 6        m_attributesExE
         public uint    AttributesEx6;                                // 7        m_attributesExF
-        public uint AttributesExG;                                   // 8        3.2.0 (0x20 - totems, 0x4 - paladin auras, etc...)
+        public uint AttributesEx7;                                   // 8        3.2.0 (0x20 - totems, 0x4 - paladin auras, etc...)
         public uint SomeFlags;                                       // 9        4.0.0
         public uint Unk_400_1;                                       // 10       4.0.0
         public uint    CastingTimeIndex;                             // 11       m_castingTimeIndex
