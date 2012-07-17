@@ -263,7 +263,7 @@ namespace SpellWork
 
                 rtb.AppendFormatLine("Effect {0}: Id {1} ({2})", EFFECT_INDEX, effect.Effect, (SpellEffects)effect.Effect);
                 rtb.SetDefaultStyle();
-                rtb.AppendFormat("BasePoints = {0}", effect.EffectBasePoints + 1);
+                rtb.AppendFormat("BasePoints = {0}", effect.EffectBasePoints);
 
                 if (effect.EffectRealPointsPerLevel != 0)
                     rtb.AppendFormat(" + Level * {0:F}", effect.EffectRealPointsPerLevel);
@@ -425,7 +425,7 @@ namespace SpellWork
             }
 
             rtb.AppendFormat("Aura Id {0:D} ({0})", aura);
-            rtb.AppendFormat(", value = {0}", effect.EffectBasePoints + 1);
+            rtb.AppendFormat(", value = {0}", effect.EffectBasePoints);
             rtb.AppendFormat(", misc = {0} (", misc);
 
             switch (aura)
